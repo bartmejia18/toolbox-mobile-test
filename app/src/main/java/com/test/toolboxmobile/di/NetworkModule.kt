@@ -1,6 +1,7 @@
 package com.test.toolboxmobile.di
 
 import com.test.toolboxmobile.core.AppConstants.BASE_URL
+import com.test.toolboxmobile.core.factory.CoroutineCallAdapterFactory
 import com.test.toolboxmobile.data.api.ApiAuthHelper
 import com.test.toolboxmobile.data.api.ApiAuthHelperImpl
 import com.test.toolboxmobile.data.services.AuthServices
@@ -11,6 +12,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -23,7 +25,8 @@ object NetworkModule {
         okHttpClient: OkHttpClient
     ): Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .client(okHttpClient)
         .build()
 
