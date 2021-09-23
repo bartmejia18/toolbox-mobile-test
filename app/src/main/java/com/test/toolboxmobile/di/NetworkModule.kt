@@ -1,6 +1,8 @@
 package com.test.toolboxmobile.di
 
 import com.test.toolboxmobile.core.AppConstants.BASE_URL
+import com.test.toolboxmobile.data.api.ApiAuthHelper
+import com.test.toolboxmobile.data.api.ApiAuthHelperImpl
 import com.test.toolboxmobile.data.services.AuthServices
 import dagger.Module
 import dagger.Provides
@@ -39,4 +41,7 @@ object NetworkModule {
 
     @Provides
     fun provideAuthServices(retrofit: Retrofit): AuthServices = retrofit.create(AuthServices::class.java)
+
+    @Provides
+    fun provideAuthHelper(apiAuthHelperImpl: ApiAuthHelperImpl): ApiAuthHelper = apiAuthHelperImpl
 }
