@@ -1,6 +1,7 @@
 package com.test.toolboxmobile.di
 
 import com.test.toolboxmobile.core.AppConstants.BASE_URL
+import com.test.toolboxmobile.data.services.AuthServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,4 +36,7 @@ object NetworkModule {
         client.addNetworkInterceptor(interceptor)
         return client.build()
     }
+
+    @Provides
+    fun provideAuthServices(retrofit: Retrofit): AuthServices = retrofit.create(AuthServices::class.java)
 }
