@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/splash_fragment">
+    app:startDestination="@id/login_fragment">
 
     <fragment
         android:id="@+id/splash_fragment"
         android:name="com.test.toolboxmobile.ui.splash.SplashFragment"
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash"/>
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.test.toolboxmobile.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
 </navigation>

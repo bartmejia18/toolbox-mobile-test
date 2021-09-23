@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ToolboxMobile</string>
+
+    <string name="title_sign_in">Iniciar sesión</string>
+    <string name="label_user">Palabra reservada</string>
+
+    <string name="label_sign_in">Inciar sesión</string>
 </resources>
