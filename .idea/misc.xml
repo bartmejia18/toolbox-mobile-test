@@ -6,10 +6,16 @@
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/drawable-v24/ic_slider_indicator_default.xml" value="0.371875" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/drawable-v24/ic_slider_indicator_selected.xml" value="0.371875" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/drawable-v24/selector_slider_indicator.xml" value="0.371875" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/drawable/gradient_background.xml" value="0.371875" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/activity_main.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/activity_video.xml" value="0.35572916666666665" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/fragment_home.xml" value="0.35572916666666665" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/fragment_login.xml" value="0.35572916666666665" />
         <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/fragment_splash.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/item_carousel.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/item_loader.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/item_poster.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/bmejia/FlutterProjects/ToolboxMobile/app/src/main/res/layout/item_thumb.xml" value="0.35572916666666665" />
       </map>
     </option>
   </component>
