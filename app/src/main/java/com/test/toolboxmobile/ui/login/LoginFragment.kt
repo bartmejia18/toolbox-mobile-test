@@ -3,15 +3,13 @@ package com.test.toolboxmobile.ui.login
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.syscredit.core.extensions.validator
-import com.example.syscredit.data.local.sharedPreferences
+import com.test.toolboxmobile.core.extensions.validator
+import com.test.toolboxmobile.data.local.sharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.test.toolboxmobile.R
 import com.test.toolboxmobile.core.extensions.DEFAULT_ANIMATION_DURATION_TIME

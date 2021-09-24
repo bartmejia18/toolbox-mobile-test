@@ -1,4 +1,4 @@
-package com.example.syscredit.core.extensions
+package com.test.toolboxmobile.core.extensions
 
 import android.text.Editable
 import android.text.TextWatcher

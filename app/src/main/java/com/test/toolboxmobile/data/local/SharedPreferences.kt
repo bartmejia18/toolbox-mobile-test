@@ -1,4 +1,4 @@
-package com.example.syscredit.data.local
+package com.test.toolboxmobile.data.local
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -45,7 +45,8 @@ fun <T> Context.getFromSharedPreferences(
     fileName: String? = null, key: String, default: T
 ): T where T : Any {
     val sharedPreferences = when {
-        fileName.isNullOrEmpty() -> getSharedPreferences(DEFAULT_SHARED_PREFERENCES_FILE_NAME,
+        fileName.isNullOrEmpty() -> getSharedPreferences(
+            DEFAULT_SHARED_PREFERENCES_FILE_NAME,
             Context.MODE_PRIVATE)
         else -> getSharedPreferences(fileName, Context.MODE_PRIVATE)
     }
@@ -70,7 +71,8 @@ fun <T> Context.getFromSharedPreferences(
  * @param default value to be returned if value for the provided key is not found
  * */
 fun <T> Context.getFromSharedPreferences(key: String, default: T?): T where T : Any? {
-    val sharedPreferences = getSharedPreferences(DEFAULT_SHARED_PREFERENCES_FILE_NAME,
+    val sharedPreferences = getSharedPreferences(
+        DEFAULT_SHARED_PREFERENCES_FILE_NAME,
         Context.MODE_PRIVATE)
 
     val value = when (default) {

@@ -1,7 +1,7 @@
 package com.test.toolboxmobile.data.api
 
 import android.content.Context
-import com.example.syscredit.data.local.getFromSharedPreferences
+import com.test.toolboxmobile.data.local.getFromSharedPreferences
 import com.test.toolboxmobile.data.model.Carousel
 import com.test.toolboxmobile.data.services.DataServices
 import dagger.hilt.android.qualifiers.ApplicationContext
