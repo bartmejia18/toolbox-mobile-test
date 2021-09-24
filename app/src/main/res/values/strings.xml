@@ -9,4 +9,6 @@
     <string name="action_accept">Aceptar</string>
 
     <string name="message_error_field_required">Campo requerido</string>
+
+    <string name="message_empty">No se encontraron datos a mostrar</string>
 </resources>

@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#FFFFFFFF</color>
     <color name="colorAccent">#FFCDD2</color>
 
+    <color name="textColorPrimaryInverse">#FFFFFF</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="hippie_blue">#6790B1</color>
 </resources>

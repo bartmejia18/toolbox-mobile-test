@@ -4,7 +4,10 @@ import com.test.toolboxmobile.core.AppConstants.BASE_URL
 import com.test.toolboxmobile.core.factory.CoroutineCallAdapterFactory
 import com.test.toolboxmobile.data.api.ApiAuthHelper
 import com.test.toolboxmobile.data.api.ApiAuthHelperImpl
+import com.test.toolboxmobile.data.api.ApiDataHelpImpl
+import com.test.toolboxmobile.data.api.ApiDataHelper
 import com.test.toolboxmobile.data.services.AuthServices
+import com.test.toolboxmobile.data.services.DataServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,4 +50,10 @@ object NetworkModule {
 
     @Provides
     fun provideAuthHelper(apiAuthHelperImpl: ApiAuthHelperImpl): ApiAuthHelper = apiAuthHelperImpl
+
+    @Provides
+    fun provideDataServices(retrofit: Retrofit): DataServices = retrofit.create(DataServices::class.java)
+
+    @Provides
+    fun ProvideDataHelper(apiDataHelpImpl: ApiDataHelpImpl): ApiDataHelper = apiDataHelpImpl
 }
