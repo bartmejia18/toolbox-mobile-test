@@ -48,6 +48,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         binding.carouselRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.carouselRecyclerView.initAdapter<Carousel>(R.layout.item_carousel).onBindView { itemView, item, _ ->
@@ -66,7 +67,11 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
                 itemPosterBinding.textViewTitle.text = itemVideo?.title
                 Glide.with(requireContext()).load(itemVideo?.imageUrl.toString()).into(itemPosterBinding.imageView)
             }.onClick { view, item, position ->
-                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToVideoActivity())
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToVideoActivity(
+                    title = item?.title?:"",
+                    description = item?.description?:"",
+                    url = item?.videoUrl?:""
+                ))
             }.setItems(item?.items?.toMutableList())
         }
 

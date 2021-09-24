@@ -38,7 +38,7 @@
         android:fontFamily="sans-serif-medium"
         tools:text="{{Title}}"
         android:textAlignment="center"
-        android:textSize="@dimen/dimen_title_poster"
+        android:textSize="@dimen/dimen_title_thumb"
         android:textStyle="bold" />
 
 </LinearLayout>

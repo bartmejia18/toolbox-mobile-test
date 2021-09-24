@@ -12,4 +12,5 @@
     <string name="message_error_field_required">Campo requerido</string>
 
     <string name="message_empty">No se encontraron datos a mostrar</string>
+    <string name="media_url_mp3">https://d11gqohmu80ljn.cloudfront.net/128/media-20210712191955-cbdi-0.m3u8/master.m3u8</string>
 </resources>

@@ -26,10 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.video.VideoActivity"
-            android:label="@string/title_video">
-        </activity>
     </application>
 
 </manifest>

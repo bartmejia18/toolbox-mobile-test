@@ -36,11 +36,27 @@
             app:destination="@id/splash_fragment" />
         <action
             android:id="@+id/action_home_fragment_to_videoActivity"
-            app:destination="@id/videoActivity" />
+            app:destination="@id/video_fragment">
+            <argument
+                android:name="title"
+                android:defaultValue=""
+                app:argType="string"
+                />
+            <argument
+                android:name="description"
+                android:defaultValue=""
+                app:argType="string"
+                />
+            <argument
+                android:name="url"
+                android:defaultValue=""
+                app:argType="string"
+                />
+        </action>
     </fragment>
-    <activity
-        android:id="@+id/videoActivity"
-        android:name="com.test.toolboxmobile.ui.video.VideoActivity"
-        android:label="VideoActivity"
-        tools:layout="@layout/activity_video"/>
+    <fragment
+        android:id="@+id/video_fragment"
+        android:name="com.test.toolboxmobile.ui.video.VideoFragment"
+        android:label="VideoFragment"
+        tools:layout="@layout/fragment_video"/>
 </navigation>
