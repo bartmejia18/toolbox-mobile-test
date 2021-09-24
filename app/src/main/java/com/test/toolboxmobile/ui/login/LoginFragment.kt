@@ -50,7 +50,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
                             hideKeyboard()
                             viewModel.doLogin(
                                 jsonObjectOf(
-                                    "sub" to "ToolboxMobileTest"
+                                    "sub" to reservedWordTextInput.editText?.text.toString()
                                 )
                             )
                         }
