@@ -27,10 +27,8 @@ class LoginViewModel @Inject constructor(
         viewModelScope.launch {
             _auth.postValue(Resource.loading(null))
             if (networkHelper.isNetworkConnected()) {
-                Log.d("--->", "$sub")
                 authRepository.auth(sub).let {
                     if (it.isSuccessful) {
-                        Log.d("--->", "isSuccessfull")
                         _auth.postValue(
                             Resource.success(
                                 it.message(),

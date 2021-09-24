@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.syscredit.core.extensions.validator
+import com.example.syscredit.data.local.sharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.test.toolboxmobile.R
 import com.test.toolboxmobile.core.extensions.DEFAULT_ANIMATION_DURATION_TIME
@@ -57,21 +59,28 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
 
             with(viewModel) {
                 auth.observe(viewLifecycleOwner) {
-                    Log.d("--->", "observe $it")
                     when (it.status) {
                         Status.LOADING -> {
                             loginButton.text = ""
+                            loginButton.isEnabled = false
                             progressBar.show()
                         }
                         Status.SUCCESS -> progressBar.fadeOut(DEFAULT_ANIMATION_DURATION_TIME, object : AnimatorListenerAdapter() {
                             override fun onAnimationEnd(animation: Animator?) {
                                 super.onAnimationEnd(animation)
-                                Toast.makeText(requireContext(), "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
+                                loginButton.isEnabled = true
+                                loginButton.text = getString(R.string.label_sign_in)
+                                activity?.sharedPreferences {
+                                    putString("token", it.data?.token)
+                                    putString("type", it.data?.type)
+                                }
+                                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
                             }
                         })
                         Status.ERROR -> progressBar.fadeOut(DEFAULT_ANIMATION_DURATION_TIME, object : AnimatorListenerAdapter() {
                             override fun onAnimationEnd(animation: Animator?) {
                                 super.onAnimationEnd(animation)
+                                loginButton.isEnabled = true
                                 loginButton.text = getString(R.string.label_sign_in)
                                 MaterialAlertDialogBuilder(requireContext(), R.style.ThemeOverlay_AppCompat_Dialog_Alert)
                                     .setTitle(R.string.title_error_login)
